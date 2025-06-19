@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Enter First Name" required>
+        <br><br>
+    
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name" required>
+        <br><br>
+
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+        <br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        Gender: <br>  
+        <label for="male"> Male</label>
+        <input type="radio" name="gender" id="male"><br>
+
+        <label for="female"> Female</label>
+        <input type="radio" name="gender" id="female"><br>
+
+        <label for="other"> Others</label>
+        <input type="radio" name="gender" id="other"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="0" max="120">
+        <br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+        <br><br>
+    
+        Preferences: <br>
+        <label for="painting">Painting:</label>
+        <input type="checkbox" id="painting" name="painting"><br>
+        <label for="oilpainting">Oil Painting:</label>
+        <input type="checkbox" id="oilainting" name="oilpainting"><br>
+        <label for="waterpainting">Water Painting:</label>
+        <input type="checkbox" id="waterainting" name="waterainting"><br>
+        <br>
+
+        <label for="occupation">Select Occupation</label>
+        <select id="occupation" name="occupation">
+            <option value="student">Student</option>
+            <option value="engineer">Engineer</option>
+            <option value="doctor">Doctor</option>
+            <option value="enterpreneur">Enterpreneur</option>
+        </select>
+        <br><br>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" accept=".pdf,.doc,.docx" id="resume" name="resume">
+        <br><br>
+
+        <label for="portfolio">Portfolio URL:</label>
+        <input type="url" id="portfolio" name="portfolio" placeholder="Portfolio URL">
+        <br><br>
+
+        <textarea id="about" name="about" rows="4" cols="50" placeholder="Tell us about yourself..."></textarea>
+        <br><br>
+
+        <input type="submit" value="Submit form"></tab>
+        <input type="reset" value="Reset form">
+</body>
+</html>
