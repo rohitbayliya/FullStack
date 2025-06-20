@@ -1,0 +1,22 @@
+
+Task: - make a complete webpage using headings, paragraphs with following sections 
+Section 1: My Favorite Hobby
+Goal: Use headings and paragraphs to describe your favorite hobby.
+
+⦁	Use <h1>, <h2>, and <h3> for different sections
+⦁	Write at least 2–3 paragraphs describing the hobby
+⦁	Use bold, italic, underline, and line breaks to format your text
+	Use images and links (if any)
+
+Section 2: Biography Page
+Goal: Create a simple webpage that tells about a famous person (or yourself).
+⦁	Use headings for name, early life, achievements, etc.
+⦁	Use formatted paragraphs (<b>, <i>, <u>)
+⦁	Add paragraph alignment (left, center, right)
+	Use images and links (if any)
+Section 3: Daily Routine
+Goal: Describe your daily routine using structured content.
+⦁	Use <h1> for the title: "My Daily Routine"
+⦁	Use <h2> for Morning, Afternoon, and Evening
+⦁	Under each, write a formatted paragraph
+	Use images and links (if any)
