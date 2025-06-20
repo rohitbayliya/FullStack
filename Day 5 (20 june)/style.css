@@ -1,0 +1,17 @@
+#external{
+    color: brown;
+}
+
+.question{
+    color: red;
+    width: 500px; height: 50px;
+    border: 1px solid blueviolet;
+    border-bottom-right-radius: 10px;
+}
+
+.answer{
+    color: green;
+    width: 500px; height: 50px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+}

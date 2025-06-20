@@ -1,0 +1,338 @@
+🎨 CSS Designing Assignment – Core Properties Practice
+
+Task 1 : - write all the properties and their values (you have studied so far) in a text file with 
+detailed explaination.
+
+Table of Contents:
+    1. Introduction to CSS
+    2. CSS Syntax
+    3. Types of selectors in CSS
+    4. Creating boxes/blocks in CSS
+    5. Margin of boxes/blocks in CSS
+    6. Padding of boxes/blocks in CSS
+    7. Background properties of boxes/blocks in CSS
+
+1.  INTRODUCTION TO CSS
+
+    CSS is acronym of Cascading Style Sheets. 
+    It helps to define the presentation of HTML elements as a separate file known as CSS file having .css extension.
+
+    What is CSS?
+    > CSS stands for Cascading Style Sheets, used to describe the presentation and design of a web pages.
+    > Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, 
+      how columns are sized and laid out, what background images or colors are used.
+    > CSS can control the layout of multiple web pages all at once.
+
+2. CSS SYNTAX
+
+    Syntax of CSS consist of selectors and declaration used to apply styles to HTML elements.
+
+    selector {
+        property: value;
+    }
+
+    > The selector targets the HTML element/elements that you want to style.
+    > The declaration block contains one or more declarations enclosed in curly braces {}.
+    > Each declaration consists of a property and a value separated by a colon :. Declarations are separated by semicolons ;.
+
+3.  TPYES OF SELECTORS IN CSS   
+
+    CSS Selectors are used to select the HTML elements you want to style on a web page. 
+    They allow you to target specific elements or groups of elements to apply styles like colors, fonts, margins, and more.
+    The element or elements that are selected by the selector are referred to as subject of the selector.
+
+    a. UNIVERSAL SELECTOR
+        CSS universal selector is a special selector that selects all the elements in an HTML document. It is denoted by an asterisk mark (*).
+
+        Syntax
+        The syntax for the universal selector is as follows:
+            * {
+                margin: 0;
+                padding: 0;
+            }
+    b. ELEMENT SELECTOR
+        CSS element selector selects and styles specific HTML elements. The element selector is defined by simply using the element's name in the stylesheet.
+
+        Syntax
+        The syntax for the element selector is as follows:
+            p {
+                color: green;
+            }
+
+            h1 {
+                text-decoration-line: underline;
+            }
+
+    c. CLASS SELECTOR
+        CSS class selector selects an element with a specific class attribute. The class selector is defined using a period (.) followed by the class name.
+
+        Syntax
+        The syntax for the class selector is as follows:
+            .style-h1 {
+                text-decoration-line: underline;
+            }
+
+            .style-p {
+                color: green;
+                font-size: 25px;
+            } 
+
+    d. ID SELECTOR
+        CSS ID selector selects an element with a specific value for its id attribute. It is denoted by the "#" (hash) symbol.
+
+        Syntax
+        The syntax for the ID selector is as follows:
+            #style-p {
+                color: green;
+                font-size: 25px;
+            } 
+
+            #style-h1 {
+                text-decoration-line: underline;
+                color: red;
+            }
+
+    e. INLINE SELECTOR
+        Inline selectors in CSS refer to the use of the style attribute within HTML elements to apply styles directly to those elements. 
+        This method allows for quick, element-specific styling without the need for external or internal CSS files.
+        For example, the style attribute can be used to set the text color and font size of a paragraph directly in the HTML code.
+
+        Inline styles do not use selectors or curly braces, and instead, the style attribute contains CSS property-value pairs separated by semicolons.
+
+        Syntax
+        The syntax for the inline selector is as follows:
+            <p style="color: blue; font-size: 16px;">
+            This is a blue paragraph with font size 16px.
+            </p>
+
+    d. INTERNAL & ENTERNAL SELECTORS
+        Internal and external CSS differ primarily in their location, scope, and reusability, though they both utilize the same CSS selectors for styling elements.
+
+        Internal CSS
+            Location: Defined within a <style> tag in the <head> section of an HTML document.
+            Scope: Applies styles to the entire HTML document where the <style> tag is placed.
+            Reusability: Styles can be reused across multiple elements within the same HTML document but not across different HTML files.
+
+            Syntax
+                <head>
+                <style>
+                    p {
+                    color: blue;
+                    }
+                </style>
+                </head>
+                <body>
+                <p>This is a blue-colored text.</p>
+                </body>
+
+        External CSS
+            Location: Stored in a separate .css file and linked to the HTML document using the <link> tag within the <head> section.
+            Scope: Styles defined in an external CSS file can be applied to multiple HTML documents, making it suitable for large-scale websites.
+            Reusability: Highly reusable, as a single CSS file can control the styling of multiple pages, ensuring consistency and reducing redundancy.
+
+            Syntax
+            html file
+                <head>
+                <link rel="stylesheet" href="styles.css">
+                </head>
+                <body>
+                <p>This is a blue-colored text.</p>
+                </body>
+            style.css
+                p {
+                    color: blue;
+                }
+
+4. CREATING BOXES/BLOCKS IN CSS
+    To create boxes or blocks we need to under many properties of css.
+
+    CSS Width and Heigth
+    In CSS, the width and height properties are used to specify the size (width and height) of an element. 
+    The width property defines how wide the element's content can get, while the height property defines how tall the element can be.
+    These properties can be set using various units such as pixels (px), percentages (%), ems (em), rems (rem), or viewport units (vw, vh).
+
+    Border
+    The border property creates a border around an HTML element, 
+    such as a div, image, or text. You can customize the border by changing the border style, width, radius, and color for each side of the element.
+
+    border-style: It specifies whether a border should be solid, dashed line, double line, or one of the other possible values.
+    border-width: It specifies the width of a border.
+    border-color: It specifies the color of a border.
+
+    Border Style For Individual Sides:
+    border-top-style: It sets the style of an element's top border.
+    border-bottom-style: It sets the style of an element's bottom border.
+    border-left-style: It sets the style of an element's left border.
+    border-right-style: It sets the style of an element's right border.
+
+    Border width for individual sides:
+    border-top-width: Sets the width of the top border.
+    border-bottom-width: Sets the width of the bottom border.
+    border-left-width: Sets the width of the left border.
+    border-right-width: Sets the width of the right border.
+
+    Border color property for individual sides:
+    border-top-color: Sets the color of the top border.
+    border-bottom-color: Sets the color of the bottom border.
+    border-left-color: Sets the color of the left border.
+    border-right-color: Sets the color of the right border.
+
+    Borders Individual Side Shorthand Property:
+    border-top property: It is a shorthand property for setting the top border properties.
+    border-bottom property: It is a shorthand property for setting the bottom border properties.
+    border-left property: It is a shorthand property for setting the left border properties.
+    border-right property: It is a shorthand property for setting the right border properties.
+
+    example:
+    border-top: 4px solid red;
+    border-bottom: 2px dashed blue;
+    border-left: 6px dotted green;
+    border-right: 8px double yellow;
+
+    Override border Shorthand Property:
+    div {
+        border: 5px solid gray;
+        border-bottom-width: 15px;
+    }
+
+    CSS border-radius Property:
+    CSS border-radius property is used to specify the roundness of border edges. 
+    The value for this property can be in length (px, em) or percentages.
+    A border radius of 50% indicates a complete circle.
+
+    example:
+    border-radius: 20px;
+    border-radius: 50%;
+    border-bottom-right-radius: 30px;
+
+
+5. MARGIN OF BOXES/BLOCKS IN CSS
+    CSS margins are used to create space around the outer part of an element.
+
+    What is CSS Margin?
+        > A Margin in CSS makes the layout visually appealing by adding extra space between elements.
+        > You can set the margin for individual sides using properties margin-bottom, margin-top, margin-left and margin-right.
+        > Negative Margin: A margin with a negative value indicates the elements overlap with each other.
+
+    Define Margin
+    To define any margin on any HTML element you can use the CSS margin property. 
+    This property is a shorthand property of the 'margin-top', 'margin-right', 'margin-bottom', and 'margin-left' properties. 
+    A single value will generate a margin all around the element.
+
+        Syntax
+            margin: "value";
+    
+    CSS Individual Margin Properties:
+    margin-top: This property is used to set the top margin of any element.
+    margin-right: This property is used to set the right margin of any element.
+    margin-bottom: This property is used to set the bottom margin of any element.
+    margin-left: This property is used to set the left margin of any element.
+
+        Syntax
+            margin-top: "value";
+            margin-right: "value";
+            margin-bottom: "value";
+            margin-left: "value";
+
+    CSS Margin Shorthand Property
+        There are four ways to provide value to the CSS margin property all of them are mentioned and described below with the complete example code.
+
+        Single Value: Here you can provide a single value to the margin property that same value will be applicable on four sides of the the element.
+
+        Two Values: For two values, the first value(10px) represents the top and bottom margin while the second value(20px) represents the left and right margin.
+         For example − margin: 10px 20px;
+       
+        Three Values: For three values, the first value(10px) represents the top margin, the second value(15px) represents the left and right margin,
+         and the third value(20px) represents the bottom margin. For example − margin: 10px 15px 20px;
+        
+        Four Values: For four values, the first value(5px) represents the top margin, the second value(10px) represents the right margin,
+        the third value(15px) represents the bottom margin, and the fourth value(20px) represents the left margin. For example − margin: 5px 10px 15px 20px;
+       
+            Syntax
+                The syntax for the margin with single, double, triple, and four values is as follows:
+                margin: "value" // Single Value
+                margin: "value value" // Two Values
+                margin: "value value value" // Three Values
+                margin: "value value value value" // Four Values
+
+6.  PADDING OF BOXES/BLOCKS IN CSS
+    CSS padding is used to create extra space between the border of the element and its contents.
+
+    Define Padding
+    To define any padding on any HTML element, you can use the CSS padding property. This property is shorthand property of 'padding-top', 'padding-right', 'padding-bottom', and 'padding-left' properties. A single value will generate padding all around the element.
+
+    Syntax
+    padding: "value";
+
+    CSS Individual Padding Properties:
+    padding-top: This property is used to set the top padding of any element.
+    padding-right: This property is used to set the right padding of any element.
+    padding-bottom: This property is used to set the bottom padding of any element.
+    padding-left: This property is used to set the left padding of any element.
+
+    CSS Padding Shorthand Property
+    There are four ways to provide value to the CSS padding property all of them are mentioned and described below with the complete example code.
+
+    Single Values: Here you can provide a single value to the padding property that same value will be applicable on four sides of the the element.
+    
+    Two Values: For two values, the first value(10px) represents the top and bottom padding while the second value(20px) represents the left and right padding. 
+    For example - padding: 10px 20px;
+    
+    Three Values: For three values, the first value(10px) represents the top padding, the second value(15px) represents the left and right padding, 
+    and the third value(20px) represents the bottom padding. For example - padding: 10px 15px 20px;
+    
+    Four Values: For four values, the first value(5px) represents the top padding, the second value(10px) represents the right padding, 
+    the third value(15px) represents the bottom padding, and the fourth value(20px) represents the left padding. For example - padding: 5px 10px 15px 20px;
+    
+    Syntax
+    The syntax for the padding with single, double, triple, and four values is as follows:
+    padding: "value" // Single Value
+    padding: "value value" // Two Values
+    padding: "value value value" // Three Values
+    padding: "value value value value" // Four Values
+
+
+7. BACKGROUND PROPERTIES OF BOXES/BLOCKS IN CSS
+    CSS backgrounds define the background colors and images of HTML elements. They allow you to use different colors, gradients, or images behind the content. 
+
+    CSS Background Shorthand Property
+    The background shorthand property allows you to specify all background properties in a single declaration.
+
+    The correct order of properties when using the shorthand background property is as follows:
+
+    background-color
+    background-image
+    background-position
+    background-size (must be used with /)
+    background-repeat
+    background-origin
+    background-attachment
+    background-clip
+
+    Note: If background-size is to be added, it must be included immediately after the background-position, separated with '/'. For example: "left/50%".
+
+    Useful Background properties:
+
+    background-color: "value";
+
+    background-image: url("url of image");
+
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: round; - round off image ratio to fit the image in the box
+    background-repeat: space; - put the extra space between the images (repeating or more than one images)
+
+    background-position: "left offset value"  "right offset value";
+    background-position: center;
+    background-position: top;
+    background-position: right;
+    background-position: bottom;
+    background-position: bottom right;
+
+    background-size: "width value" "height value";
+    background-size: contain; - adjust image width to box width
+    background-size: cover; - smaller side of the image can be used to adjust (Larger side will be trimmed)
+
+    background-attachment: scroll; - moves with box
+    background-attachment: fixed; - does not move with box, fixed on screen but can only be visible inside the box
