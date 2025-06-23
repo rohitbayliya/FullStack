@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpage</title>
+    <style>
+        header {
+            background-color: white; 
+            color: #bbc98d;
+            padding: 20px; 
+            font-family: Arial;
+            display: flex;
+        }
+        a {
+            color: lightgreen;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 13px;
+            font-weight: 300;
+        }
+        .logo {
+            flex: 3;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .logo-green{
+            color: green;
+        }
+        .heading {
+            background-color: #008000;
+            height: 50px;
+            width: 100%;
+            color: #bbc98d;
+            font-size: 22px;
+            font-weight: 700;
+            align-items: center;
+            display: flex;
+        }
+        .main {
+            display: flex;
+            width: 100%;
+            justify-content: left;
+            padding-top: 30px;
+            margin-right: 10px;
+        }
+        .sidebar {
+            width: 25%;
+            padding-right: 20px;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        .content {
+            width: 75%;
+            margin-right: 20px;
+        }
+        .content button {
+            margin-bottom: 10px;
+            background: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .quotes {
+            background-color: #e0f0c0;
+            display: flex;
+            padding: 30px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .quote-box {
+            width: 30%;
+            padding: 10px;
+        }
+
+        .quote-box h3 {
+            color: #006600;
+        }
+
+        .quote-box p {
+            color: #006600;
+        }
+                footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        footer a {
+            color: green;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><span class="logo-green">Cool</span>Logo</div>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="">FAQ</a>
+        <a href="" style="margin-right: 60px;">Help</a>
+    </header>
+    <div class="heading">
+        <p style="margin-left: 20px;">Heading</p>
+    </div>
+
+    <div class="main">
+        <div class="sidebar">
+            <h3 style="color: #008000;">Left heading</h3>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <button><b>View Template Source Code</b></button>
+            <p style="color: #ccc;">If the facts don’t fit the theory, change the facts. The smaller your reality, the more convinced you are that you know everything.</p>
+            <h3 style="color: #008000;">Heading</h3>
+            <p style="color: #ccc;">The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now.</p>
+            <p style="color: #ccc;">You will not be punished for your anger, you will be punished by your anger.</p></div>
+    </div>
+
+    <div class="quotes">
+        <div class="quote-box">
+            <h3>Heading</h3>
+            <p>This, too, will pass.</p>
+            <h3>Heading</h3>
+            <p>The most important moment of your life is now...</p>
+        </div>
+        <div class="quote-box">
+            <h3>Heading</h3>
+            <p>You will not be punished for your anger...</p>
+            <h3>Heading</h3>
+            <p>The most important moment of your life is now...</p>
+        </div>
+        <div class="quote-box">
+            <h3>Heading</h3>
+            <p>You will not be punished for your anger. The past has no power...</p>
+        </div>
+    </div>
+
+    <footer>
+    © Copyright Your Site |
+    <a href="#">Terms of Use</a> |
+    <a href="#">Privacy Policy</a>
+  </footer>
+</body>
+</html>

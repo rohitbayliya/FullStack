@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+
+       .navbar {
+            height: 15px;
+            background-color: #006666;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 20px;
+            margin-bottom: 60px;
+        } 
+        .logo{
+            font-weight: 700;
+        }  
+
+        .title {
+            font-size: 24px;
+            color: gray;
+            text-align: right;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        
+        a.contact{
+            background-color: white;
+            color: #006666;
+            padding: 5px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            border: none;
+        }
+        .f1{
+            flex: 1;
+        }
+        .f2{
+            flex: 2;
+        }
+    </style>
+</head>
+<body bgcolor="lightblue">
+        <p class="title">BOYWITHCODES</p>
+        <div class="navbar">
+            <a href="#" class="logo f2">B W C</a>
+            <a href="#" class="f1">Home</a>
+            <a href="#" class="f1">About</a>
+            <a href="#" class="f2">Services</a>
+            <a href="#" class="contact">Contact</a>
+        </div>
+
+        <div class="navbar">
+            <a href="#" class="f1">Home</a>
+            <a href="#" class="f1">About</a>
+            <a href="#" class="f1">Services</a>
+            <a href="#" class="contact ">Contact</a>
+            <a href="#" class="logo f2" style="text-align: right;">B W C</a>
+        </div>
+
+        <div class="navbar">
+            <a href="#" class="f1">Home</a>
+            <a href="#" class="f1">About</a>
+            <a href="#" class="f1">Services</a>
+            <a href="#" class="logo f2" >B W C</a>
+            <a href="#" class="contact "style="text-align: right;">Contact</a>
+        </div>
+</body>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felx box</title>
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            flex-wrap: nowrap;
+        }
+        .header {
+            width: 100%;
+            height: 70px;
+            background-color: greenyellow;
+        }
+        .item{
+            width: 100px;
+            height: 100%;
+            background-color: lightgoldenrodyellow;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .i3{
+            height: 100%;
+            width: 400px;
+            background-color: lightcoral;
+        }
+        .i2{
+            height: 100%;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header"> Header...</header>
+    <div class="container">
+        
+        <div class="item i2">2</div>
+        <div class="item i3">3</div>
+        <div class="item i4">4</div>
+    </div>
+</body>
+</html>
