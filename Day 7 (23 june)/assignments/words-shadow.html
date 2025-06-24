@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow</title>
+    <style>
+
+        .shadow-depth {
+            --shadow-color: black; /* default fallback */
+            text-shadow:
+                1px 1px var(--shadow-color),
+                2px 2px var(--shadow-color),
+                3px 3px var(--shadow-color),
+                4px 4px var(--shadow-color),
+                5px 5px var(--shadow-color),
+                6px 6px var(--shadow-color),
+                7px 7px var(--shadow-color),
+                8px 8px var(--shadow-color),
+                9px 9px var(--shadow-color),
+                10px 10px var(--shadow-color),
+                11px 11px var(--shadow-color),
+                12px 12px var(--shadow-color),
+                13px 13px var(--shadow-color),
+                14px 14px var(--shadow-color),
+                15px 15px var(--shadow-color);
+        }
+
+        .purple-shadow { --shadow-color: #e485f8; }
+        .red-shadow    { --shadow-color: #ed635d; }
+        .green-shadow  { --shadow-color: #6dc0a9; }
+        .orange-shadow { --shadow-color: #f2a064;}
+
+        h1 {
+            font-size: 100px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .blue {
+            color: blue;
+        }
+        .red {
+            color: #ed635d;
+        }
+        .yellow {
+            color: #ffd914;
+        }
+
+        .orange {
+            color: orange;
+        }
+
+
+    </style>
+</head>
+<body bgcolor="#e8fff8">
+    
+    <h1>
+        <span class="shadow-depth purple-shadow blue">W</span>
+        <span class="shadow-depth orange-shadow red">A</span>
+        <span class="shadow-depth green-shadow yellow">S</span>
+        <span class="shadow-depth orange-shadow red">H &#8197;</span>
+        
+        <span class="shadow-depth green-shadow yellow">Y</span>
+        <span class="shadow-depth red-shadow orange">O</span>
+        <span class="shadow-depth orange-shadow red">U</span>
+        <span class="shadow-depth green-shadow yellow">R&#8197;</span>
+
+        <span class="shadow-depth red-shadow orange">H</span>
+        <span class="shadow-depth green-shadow yellow">A</span>
+        <span class="shadow-depth purple-shadow blue">N</span>
+        <span class="shadow-depth red-shadow orange">D</span>
+        <span class="shadow-depth purple-shadow blue">S</span>
+        <span class="shadow-depth orange-shadow red">!</span>
+        
+    </h1>
+
+</body>
+</html>

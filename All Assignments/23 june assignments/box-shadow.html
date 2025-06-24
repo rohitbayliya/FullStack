@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box shadow</title>
+    <style>
+
+        .box {
+            width: 200px; height: 200px;
+            border-radius: 5px;
+            position: fixed;
+            left: 50px;
+            top: 50px;
+        }
+        .shadow-1 {
+            box-shadow: inset 1px 1px 50px 1px rgb(201, 194, 194);
+        }
+        .shadow-3 {
+            box-shadow: 0 6px 10px 0 rgb(164, 164, 164);
+        }
+        .shadow-4 {
+            box-shadow: -5px 5px 20px 1px rgb(86, 84, 84);
+        }
+        .shadow-2 {
+            box-shadow: -8px 80px 70px -5px rgba(0, 0, 0, 0.267);
+        }
+
+        .right {
+            left: 500px;
+        }
+        .bottom {
+            top: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box shadow-1"></div>
+    <br> <br>
+    <div class="box shadow-2 right"></div>
+    <br><br>
+    <div class="box shadow-3 bottom"></div>
+    <br><br>
+    <div class="box shadow-4 right bottom"></div>
+    <br><br><br>
+</body>
+</html>

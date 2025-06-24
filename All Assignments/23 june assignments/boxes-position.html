@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxes</title>
+    <style>
+
+        .box {
+            height: 200px;
+            width: 300px;
+            border: 5px solid black ;
+            position: fixed;
+            background-color: lightgreen;
+        }
+        .top {
+            top: 100px;
+            z-index: 2;
+        }
+        .right {
+            left: 500px;
+            z-index: 4;
+        }
+        .left {
+            left: 50px;
+        }
+        .bottom {
+            top: 350px;
+        }
+        .center {
+            top: 225px;
+            left: 275px;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <p style="height: 1000px;"></p>
+    <div class="box top left"></div>
+    <div class="box top right"></div>
+    <div class="box bottom left"></div>
+    <div class="box bottom right"></div>
+    <div class="box center"></div>
+</body>
+</html>
