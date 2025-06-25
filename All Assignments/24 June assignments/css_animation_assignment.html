@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Animation Assignment</title>
+  <style>
+    .task1 {
+      text-align: center;
+    }
+
+    .task1 button {
+      padding: 15px 30px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.5s;
+      border: none;
+    }
+
+    .task1 button:hover {
+      background-color: navy;
+    }
+
+    .task2 {
+      text-align: center;
+    }
+
+    .gear {
+      font-size: 50px;
+      animation: rotate 4s linear;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    .task3 {
+      width: 100%;
+      text-align: center;
+    }
+
+    .fade-slide {
+      font-size: 30px;
+      animation: fadeSlideIn 3s linear;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(+100%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="task1">
+    <h2>Task 1: Hover Button</h2>
+    <button>Hover Me</button>
+  </div>
+  
+  <div class="task2">
+    <h2>Task 2: Rotating Gear</h2>
+    <div class="gear">⚙️</div>
+  </div>
+
+  
+  <div class="task3">
+    <h2>Task 3: Text Fade In + Slide</h2>
+    <h1 class="fade-slide">Welcome to CSS World</h1>
+  </div>
+
+</body>
+</html>

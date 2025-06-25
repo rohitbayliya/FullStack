@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        border: 2px solid red;
+        border-radius: 50%;
+        background-color: red;
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    @keyframes bounce {
+        0%{
+            top: 150px;
+            left: 0px;
+        }
+        10%{
+            top: 120px;
+            left: 10px;
+        }
+        20%{
+            top: 90px;
+            left: 30px;
+        }
+        30%{
+            top: 60px;
+            left: 60px;
+        }
+        40%{
+            top: 30px;
+            left: 100px;
+        }
+        50%{
+            top: 0px;
+            left: 140px;
+        }
+        60%{
+            top: 30px;
+            left: 210px;
+        }
+        70%{
+            top: 60px;
+            left: 300px;
+        }
+        80%{
+            top: 90px;
+            left: 350px;
+        }
+        90%{
+            top: 120px;
+            left: 390px;
+        }
+        100%{
+            top: 150px;
+            left: 400px;
+        }
+    }
+
+    .bar {
+        width: 500px;
+        height: 10px;
+        border: 5px solid;
+        margin-top: 150px;
+    }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="bar"></div>
+</body>
+</html>

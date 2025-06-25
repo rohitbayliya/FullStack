@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+            border-radius: 50%;
+            background-color: red;
+            animation-name: move-left;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes move-left {
+            0%{
+                margin-left: 0px;
+            }
+            25%{
+                margin-left: 50px;
+            }
+            50%{
+                margin-left: 100px;
+            }
+            75%{
+                margin-left: 150px;
+            }
+            100%{
+                margin-left: 1000px;
+            } 
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+            background-color: red;
+            animation-name: roll;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes roll {
+            0% {
+                transform: translateX(0px) rotate(0deg);
+            }
+            100% {
+                transform: translateX(100%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <br>
+    <div class="box"></div>
+</body>
+</html>
