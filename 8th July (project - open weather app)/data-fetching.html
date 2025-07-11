@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ele"></div>
+    <script>
+        let ele = document.querySelector('#ele')
+        let toShow = ''
+        fetch('https://dummyjson.com/todos')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            data.todos.forEach(todo => {
+                toShow += 
+                `<h3> ID: ${todo.id}</h3> Completed: ${todo.completed}<br> userid: ${todo.userId}
+                <p>${todo.todo}</p><hr>`
+            });
+            console.log(toShow);
+            ele.innerHTML = toShow;
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 70%;margin: 0 auto;
+        }
+        .title{
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        //asynchronous (non-blocking) task
+        //promises => to handle async tasks 
+        //promise => pending , fulfilled, rejected
+        // let res = fetch('https://jsonplaceholder.typicode.com/posts')
+        // // console.log(res)
+        // let jsonData = res.then(resData=>{
+        //     // console.log(resData);
+        //    return resData.json()
+        // })
+        // res.catch(err=>console.log(err))
+        // jsonData.then(data=>console.log(data))
+        // jsonData.catch(err=>console.log(err))
+        let box = document.querySelector('.box')
+        let postHtml=''
+        fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(resData=>resData.json())
+        .then(data=>{            
+            // console.log(data)
+            data.forEach(post => {
+               postHtml+= `<h3 class="title">${post.id} - ${post.title}</h3>
+                <p>${post.body} </p><hr>                
+                `
+            });
+            console.log(postHtml)
+            box.innerHTML = postHtml        
+        })
+        .catch(err=>console.log(err))
+        
+// https://dummyjson.com/docs/products
+
+    </script>
+</body>
+</html> -->

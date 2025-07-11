@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="id">Id</p>
+    <p id="email">email</p>
+    <p id="username">username</p>
+    <p id="password">password</p>
+    <p id="name">name</p>
+    <p id="phone">phone</p>
+    <p id="geolocation">geolocation</p>
+    <p id="city">city</cite></p>
+    <p id="street">street</p>
+    <p id="number">number</p>
+    <p id="zipcode">zipcode</p>
+
+
+    <script>
+        let obj = {
+            "address": {
+                "geolocation": {
+                "lat": "-37.3159",
+                "long": "81.1496"
+                },
+                "city": "kilcoole",
+                "street": "new road",
+                "number": 7682,
+                "zipcode": "12926-3874"
+            },
+            "id": 1,
+            "email": "john@gmail.com",
+            "username": "johnd",
+            "password": "m38rmF$",
+            "name": {
+                "firstname": "john",
+                "lastname": "doe"
+            },
+            "phone": "1-570-236-7033",
+            "__v": 0
+        }
+
+        let pTag = document.getElementById('id').innerText
+        document.getElementById('id').innerText=pTag+obj.id
+
+        document.getElementById('geolocation').innerText="lat: "+ obj.address.geolocation.lat + ", long: " + obj.address.geolocation.long
+        
+        document.getElementById('city').innerText=obj.address.city
+        document.getElementById('street').innerText=obj.address.street
+        document.getElementById('number').innerText=obj.address.number
+        document.getElementById('zipcode').innerText=obj.address.zipcode
+        document.getElementById('username').innerText=obj.username
+        document.getElementById('password').innerText=obj.password
+        document.getElementById('phone').innerText=obj.phone
+        document.getElementById('email').innerText=obj.email
+        document.getElementById('name').innerText="firstname: " + obj.name.firstname + " , lastname: " + obj.name.lastname
+    </script>
+</body>
+</html>

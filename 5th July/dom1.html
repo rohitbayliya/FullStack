@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Id: </p>
+    <p>Title: </p>
+    <p>Price: </p>
+    <p>Description: </p>
+    <p>Category: </p>
+    <img src="" alt="" width="200px">
+    <p>Rating: </p>
+    <p>Count: </p>
+    <script>
+        let obj = {
+            "id": 1,
+            "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+            "price": 109.95,
+            "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+            "category": "men's clothing",
+            "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+            "rating": {
+                "rate": 3.9,
+                "count": 120
+            }
+        }
+        let pTag0 = document.getElementsByTagName("p")[0].innerText
+        document.getElementsByTagName("p")[0].innerText=pTag0+obj.id
+
+        let pTag1 = document.getElementsByTagName("p")[1].innerText
+        document.getElementsByTagName("p")[1].innerText=pTag1+obj.title
+
+        let pTag2 = document.getElementsByTagName("p")[2].innerText
+        document.getElementsByTagName("p")[2].innerText=pTag2+obj.price
+
+        let pTag3 = document.getElementsByTagName("p")[3].innerText
+        document.getElementsByTagName("p")[3].innerText=pTag3+obj.description
+
+        let pTag4 = document.getElementsByTagName("p")[4].innerText
+        document.getElementsByTagName("p")[4].innerText=pTag4+obj.category
+
+        document.getElementsByTagName("img")[0].src=obj.image
+
+        let pTag5 = document.getElementsByTagName("p")[5].innerText
+        document.getElementsByTagName("p")[5].innerText=pTag5+obj.rating.rate
+
+        let pTag6 = document.getElementsByTagName("p")[6].innerText
+        document.getElementsByTagName("p")[6].innerText=pTag6+obj.rating.count
+    </script>
+</body>
+</html>

@@ -9,7 +9,6 @@ html, body {
 }
 
 nav{
-    /* background-color: rosybrown; */
     height: 100px;
     width: 90%;
     margin: auto;
@@ -511,4 +510,9 @@ hr{
   justify-content: center;
   font-size: 1.2rem;
   color: whitesmoke;
+}
+
+
+@media screen and (max-width: 970px) {
+  
 }

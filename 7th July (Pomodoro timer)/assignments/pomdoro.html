@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomodoro Timer</title> 
+</head>
+<body>
+  <h1>Pomodoro Timer</h1>
+  <div class="settings">
+    <label>Work: <input type="number" id="workDuration" value="25" /> min</label><br>
+    <label>Short Break: <input type="number" id="shortBreak" value="5" /> min</label><br>
+    <label>Long Break: <input type="number" id="longBreak" value="15" /> min</label><br>
+    <label>Cycles: <input type="number" id="cyclesBeforeLongBreak" value="4" /></label><br><br>
+  </div>
+  <div class="session-type" id="sessionType">Work</div>
+  <div class="timer" id="timer">25:00</div>
+  <div class="controls">
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+  <div class="cycle-display" id="cycleDisplay">⚪ ⚪ ⚪ ⚪ </div>
+
+  <script>
+    let timerInterval;
+    let isRunning = false;
+    let isPaused = false;
+    let currentCycle = 0;
+    let currentSession = 'work';
+    let remainingTime;
+
+    function getDurations() {
+      return {
+        work: parseInt(document.getElementById('workDuration').value) * 60,
+        short: parseInt(document.getElementById('shortBreak').value) * 60,
+        long: parseInt(document.getElementById('longBreak').value) * 60,
+        cycles: parseInt(document.getElementById('cyclesBeforeLongBreak').value)
+      };
+    }
+
+    function updateCycleDisplay() {
+      let output = '';
+      for (let i = 0; i < getDurations().cycles; i++) {
+        output += i < currentCycle ? '🔴 ' : '⚪ ';
+      }
+      document.getElementById('cycleDisplay').innerText = output;
+    }
+
+    function updateDisplay(seconds) {
+      let min = Math.floor(seconds / 60);
+      let sec = seconds % 60;
+      document.getElementById('timer').innerText = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+    }
+
+    function startTimer() {
+      if (isRunning) return;
+      isRunning = true;
+      isPaused = false;
+
+      const durations = getDurations();
+      if (!remainingTime) remainingTime = durations[currentSession];
+
+      timerInterval = setInterval(() => {
+        if (!isPaused) {
+          remainingTime--;
+          updateDisplay(remainingTime);
+
+          if (remainingTime <= 0) {
+            clearInterval(timerInterval);
+            isRunning = false;
+            handleSessionEnd();
+          }
+        }
+      }, 1000);
+    }
+
+    function pauseTimer() {
+      isPaused = true;
+    }
+
+    function resetTimer() {
+      clearInterval(timerInterval);
+      isRunning = false;
+      isPaused = false;
+      currentCycle = 0;
+      currentSession = 'work';
+      remainingTime = getDurations().work;
+      updateDisplay(remainingTime);
+      document.getElementById('sessionType').innerText = 'Work';
+      updateCycleDisplay();
+    }
+
+    function handleSessionEnd() {
+      const durations = getDurations();
+
+      if (currentSession === 'work') {
+        currentCycle++;
+        if (currentCycle >= durations.cycles) {
+          currentSession = 'long';
+          currentCycle = 0;
+        } else {
+          currentSession = 'short';
+        }
+      } else {
+        currentSession = 'work';
+      }
+
+      remainingTime = durations[currentSession];
+      document.getElementById('sessionType').innerText =
+        currentSession === 'work' ? 'Work' : currentSession === 'short' ? 'Short Break' : 'Long Break';
+      updateCycleDisplay();
+      updateDisplay(remainingTime);
+      startTimer();
+    }
+  </script>
+</body>
+</html> 

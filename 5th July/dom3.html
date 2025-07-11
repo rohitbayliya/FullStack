@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <img src="" alt="" width="100px">
+    <p></p>
+    <p></p>
+
+    <script>
+    let obj = {
+        "id": 1,
+        "email": "john@mail.com",
+        "password": "changeme",
+        "name": "Jhon",
+        "role": "customer",
+        "avatar": "https://imgs.search.brave.com/Z0EEymsLVCCMKvWpyP6Vc3cjb_v0Zy3vu42RTP-FfCc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNy8w/Ni8xMy8xMi81NC9w/cm9maWxlLTIzOTg3/ODNfNjQwLnBuZw",
+        "creationAt": "2025-07-04T19:50:22.000Z",
+        "updatedAt": "2025-07-04T19:50:22.000Z"
+    }
+    document.getElementsByTagName('p')[0].innerText=obj.id
+    document.getElementsByTagName('p')[1].innerText=obj.email
+    document.getElementsByTagName('p')[2].innerText=obj.password
+    document.getElementsByTagName('p')[3].innerText=obj.name
+    document.getElementsByTagName('p')[4].innerText=obj.role
+    document.getElementsByTagName('img')[0].src=obj.avatar
+    document.getElementsByTagName('p')[5].innerText=obj.creationAt
+    document.getElementsByTagName('p')[6].innerText=obj.updatedAt
+    </script>
+</body>
+</html>

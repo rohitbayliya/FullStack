@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Signup Form</h2>
+    <form action="" onsubmit="inputForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Email" required><br><br>
+        <label for="password">Password:</label>
+        <input type="text" id="password" placeholder="Password" required><br><br>
+        <label for="con-pass">Confirm password:</label>
+        <input type="text" id="con-pass" placeholder="Confirm password" required><br><br>
+        <input type="submit" value="Signup">
+        <input type="reset" value="clear">
+    </form>
+    <script>
+        function inputForm(event) {
+            event.preventDefault();
+            let name = document.getElementById('name').value;
+            console.log(name);
+            console.log(document.getElementById('email').value);
+            console.log(document.getElementById('password').value);
+            console.log(document.getElementById('con-pass').value);
+        }
+    </script>
+</body>
+</html>
