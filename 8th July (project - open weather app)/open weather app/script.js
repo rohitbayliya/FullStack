@@ -1,6 +1,6 @@
 // import { apiKey } from "./config";
 // import { apiKey } from './config.js';
-
+import apiKey from "./git-ignores/config.js";
 const result = document.getElementById('result')
 
 document.getElementById('form')
@@ -8,12 +8,10 @@ document.getElementById('form')
     event.preventDefault();
     const cityName = document.getElementById('city').value;
 
-    const requestURL = 'https://api.openweathermap.org/data/2.5/weather?q='+ cityName + '&appid=2c2d27ed29a87969ab69e5c902e23a2e';
+    const requestURL = 'https://api.openweathermap.org/data/2.5/weather?q='+ cityName + '&appid='+ apiKey;
 
     console.log("Request send to " + requestURL);
 
-
-    
         const response = await fetch(requestURL)
         try {
         if (!response.ok) {
