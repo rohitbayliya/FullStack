@@ -9,18 +9,20 @@ function addTask(){
     setTasks([...tasks,text])
     setText('')
 }
-function deleteTask(index) {
-    setTasks(tasks.filter((v,i)=>i!=index))
-}
+// function deleteTask(index) {
+//     setTasks(tasks.filter((v,i)=>i!=index))
+// }
   return (
     <div>
+      <h2>To-Do</h2>
       <input type="text" onChange={(e) => setText(e.target.value)}
       value={text} />
       <button onClick={addTask}>Add</button> <br />
       <ul>
         {tasks.map((task, index) => {
           return <li key={index}>{task}
-          {" "} <button onClick={()=>deleteTask(index)}>delete</button></li>;
+          {/* {" "} <button onClick={()=>deleteTask(index)}>delete</button> */}
+          </li>;
         })}
       </ul>
     </div>

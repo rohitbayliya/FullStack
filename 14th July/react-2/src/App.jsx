@@ -6,9 +6,21 @@ import {studentData as StudentData } from './components/student-data.js'
 import Student from './components/sutdent.jsx'
 import State from './states/State.jsx'
 import Form from './states/Form.jsx'
+import Todo from './states/Todo.jsx'
+import Todos from "./states/Todos.jsx"
+import TaskManager from './states/TaskManager.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+
+  return (
+    <>
+      <TaskManager></TaskManager>
+    </>
+  )  
+  
+  
+  // const [count, setCount] = useState(0)
 
   // return (
   //   <> <div>
@@ -18,13 +30,6 @@ function App() {
   //     </div>
   //   </>
   // )
-
-  return (
-    <>
-     {/* <State /> */}
-     <Form />
-    </>
-  )
 }
 
 export default App

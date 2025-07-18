@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "8df8",
+      "title": "hello world",
+      "body": "first line to try"
+    },
+    {
+      "id": "771e",
+      "title": "another title",
+      "body": "another title body"
+    }
+  ]
+}
