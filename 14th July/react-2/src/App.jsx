@@ -9,13 +9,16 @@ import Form from './states/Form.jsx'
 import Todo from './states/Todo.jsx'
 import Todos from "./states/Todos.jsx"
 import TaskManager from './states/TaskManager.jsx'
+import StaticTodo from './states/StaticTodo.jsx'
 
 function App() {
 
 
   return (
     <>
-      <TaskManager></TaskManager>
+      {/* <TaskManager></TaskManager> */}
+      {/* <Todos /> */}
+      <StaticTodo />
     </>
   )  
   

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const UpdatePost = ({id,setIsEdit}) => {
+const UpdatePost = ({id,setIsEdit,setChange}) => {
   const [formData, setFormData] = useState({
     title: "",
     body: "",
@@ -26,15 +26,17 @@ const UpdatePost = ({id,setIsEdit}) => {
   },[id])
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    let res = await axios.post("http://localhost:3000/posts", formData);
-    console.log("Submitted Data:", formData);
+    e.preventDefault(); 
+    let res = await axios.put("http://localhost:3000/posts/"+id, formData);
+    
     console.log(res);
     // You can add API calls or state lifting here
     setFormData({
       title: "",
       body: "",
     });
+    setChange(id)
+    setIsEdit(false)
   };
 
   return (

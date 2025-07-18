@@ -9,8 +9,6 @@ let initialState = [
 function ToDos() {
   const [todos, settodos] = useState(initialState);
   const [text, setText] = useState("");
-  const [edit, setEdit] = useState(null);
-  const [editText,setEditText] = useState('')
   function addTask() {
     settodos([...todos, { task: text, isComplete: false }]);
     setText("");
@@ -20,21 +18,9 @@ function ToDos() {
     newtodos[i].isComplete = e.target.checked;
     settodos(newtodos);
   }
-  function handleEdit(i) {
-    setEdit(i)
-    setEditText(todos[i].task)
-  }
-  function handleSave(i){
-    let newtodos = [...todos]
-    newtodos[i].task = editText 
-    settodos(newtodos)
-    setEdit(null)
-  }
-  function deleteTask(i) {
-    let newtodos = [...todos]
-    newtodos.splice(i,1)
-    settodos(newtodos)
-  }
+  
+
+  
   return (
     <div>
       <input
@@ -52,24 +38,15 @@ function ToDos() {
                 type="checkbox"
                 checked={v.isComplete}
               />
-              {edit == i ? (
-                <>
-                  <input type="text" onChange={e=>setEditText(e.target.value)}
-                  value={editText}  />
-                  <button onClick={()=>handleSave(i)}>save</button>
-                </>
-              ) : (
+               
                 <span
                   style={{
                     textDecoration: v.isComplete ? "line-through" : "none",
                   }}
                 >
-                  {" "}
-                  {v.task} {" "}
-                  <button onClick={()=>handleEdit(i)}>edit</button>{" "}
+                  {v.task} 
                 </span>
-              )}
-              <button onClick={()=>deleteTask(i)}>delete</button>
+
             </li>
           );
         })}

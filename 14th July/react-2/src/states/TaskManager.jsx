@@ -15,7 +15,9 @@ function TaskManager() {
     const [Tasks, setTasks] = useState(initialState);
     const [inputTitle, setInputTitle] = useState('');
     const [prioity, setPrioity] = useState('low');
-    
+    const [editingTaskId, setEditingTaskId] = useState(null);
+    const [editTitle, setEditTitle] = useState('');
+    const [editPriority, setEditPriority] = useState('low');
 
 
     function addTask() {
@@ -29,6 +31,38 @@ function TaskManager() {
         setTasks(newTasks)
     }
 
+    function deleteTask(id) {
+        let newTasks= [...Tasks]
+        newTasks.splice(id,1)
+        setTasks(newTasks)
+    }
+
+    function startEdit(task) {
+        setEditingTaskId(task.id);
+        setEditTitle(task.taskTitle);
+        setEditPriority(task.taskPrioity);
+    }
+
+    function submitEdit() {
+        setTasks(prev =>
+            prev.map(task =>
+            task.id === editingTaskId
+                ? { ...task, taskTitle: editTitle, taskPrioity: editPriority }
+                : task
+            )
+        );
+        setEditingTaskId(null);
+        setEditTitle('');
+        setEditPriority('low');
+    }
+
+    function cancelEdit() {
+        setEditingTaskId(null);
+        setEditTitle('');
+        setEditPriority('low');
+    }
+
+    
     return (
         <div>
             <h2>Task Manager</h2>
@@ -44,39 +78,56 @@ function TaskManager() {
                 {Tasks.map((task, index) => {
                     return (
                         <li key={index}>
-                            {/* ID: {task.id} <br />
-                            Title: {task.taskTitle} <br />
-                            Priority: {task.taskPrioity} <br />
-                            Status: {task.taskStatus} <br /> 
-                            <input type="checkbox" onChange={(e)=> changeStatus(e, index)} /><hr /> */}
-
-                            <div className="task-card">
-                            <div className="task-header">
-                                <input type="checkbox" id="task-0" className="task-checkbox" onChange={(e)=> changeStatus(e, index)}/>
-                                <label for="task-0" className="task-title">{task.taskTitle}</label>
-                            </div>
-                            <div className="task-meta">
-                                <span className="task-id">ID: {task.id}</span>  
-                                {/* <span className="priority" style={{background-color:prioity=='high'?'red':'green'}} >Priority: {task.taskPrioity}</span> */}
-                                <span
-                                    className="priority"
-                                    style={{
-                                        backgroundColor:
-                                            task.taskPrioity === 'high'
-                                            ? 'red'
-                                            : task.taskPrioity === 'low'
-                                            ? 'green'
-                                            : 'orange',
-                                        }}
-
+                            {editingTaskId === task.id ? (
+                                <div>
+                                    <input
+                                    type="text"
+                                    value={editTitle}
+                                    onChange={(e) => setEditTitle(e.target.value)}
+                                    />
+                                    <select
+                                    value={editPriority}
+                                    onChange={(e) => setEditPriority(e.target.value)}
                                     >
-                                    Priority: {task.taskPrioity}
-                                </span>
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high">High</option>
+                                    </select>
+                                    <button onClick={submitEdit}>Save</button>
+                                    <button onClick={cancelEdit}>Cancel</button>
+                                </div>
+                                ) : (
+                                <div>
+                                    <div className="task-card">
+                                    <div className="task-header">
+                                        <input type="checkbox" id="task-0" className="task-checkbox" onChange={(e)=> changeStatus(e, index)} placeholder="Enter Task"/>
+                                        <label htmlFor="task-0" className="task-title">{task.taskTitle}</label>
+                                    </div>
+                                    <div className="task-meta">
+                                        <span className="task-id">ID: {task.id}</span>  
+                                        <span
+                                            className="priority"
+                                            style={{
+                                                backgroundColor:
+                                                    task.taskPrioity === 'high'
+                                                    ? 'red'
+                                                    : task.taskPrioity === 'low'
+                                                    ? 'green'
+                                                    : 'orange',
+                                                }}
 
-                                <span className="status pending" id="status-0">Status: {task.taskStatus}</span>
-                            </div>
-                            </div>
+                                            >
+                                            Priority: {task.taskPrioity}
+                                        </span>
 
+                                        <span className="status pending" id="status-0">Status: {task.taskStatus}</span>
+                                        <button onClick={()=>deleteTask(index)}>Delete</button>
+                                        <button onClick={() => startEdit(task)}>Edit</button>
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                                )}
                         </li>
                     )
                 })}
