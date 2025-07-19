@@ -16,9 +16,9 @@ function App() {
 
   return (
     <>
-      {/* <TaskManager></TaskManager> */}
+      <TaskManager></TaskManager>
       {/* <Todos /> */}
-      <StaticTodo />
+      {/* <StaticTodo /> */}
     </>
   )  
   
