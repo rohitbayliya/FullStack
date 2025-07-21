@@ -1,0 +1,276 @@
+.cards {
+    display: inline-block;
+    transition: transform .2s;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0.19rem;
+    cursor:pointer;
+    min-width:200px;
+    height:300px;
+    z-index:0;
+    border: 1px solid rgb(99, 99, 99);
+}
+
+.cards:hover {
+    transform: scale(1.2);
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.cards__img {
+    height: 300px;
+}
+
+.cards__overlay {
+    position: absolute;
+    padding: 0 1rem 1rem 1rem;
+    bottom: 0px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    justify-content: flex-end;
+    background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+    opacity: 0;
+    transition: opacity .2s;
+}   
+
+.cards__overlay:hover {
+    opacity: 1;
+}
+
+.card__title {
+    font-weight: 900;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.card__runtime {
+    font-size: .75rem;
+    margin-bottom: 0.25rem;
+}
+
+.card__rating {
+    float: right;
+}
+
+.card__description {
+    font-style: italic;
+    font-size: .75rem;
+    margin-bottom: 0.25rem;
+}
+
+.movie__list {
+    padding: 0 3rem 3rem 3rem;
+}
+
+.list__title {
+font-size: 1.75rem;
+margin:  2.5rem;
+}
+
+.list__cards {
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+}
+
+.header {
+    margin: 0 2.5rem;
+    padding: .5rem 0;
+    align-items: center;
+    display: flex;
+    justify-content:space-between;
+}
+
+.headerLeft, .headerRight {
+    display: flex;
+    align-items: center;
+
+}
+
+a > span{
+    margin: 0 30px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: white;
+}
+
+a > span:hover {
+    color: red;
+}
+
+.header__icon {
+    width: 80px;
+    cursor: pointer;
+}
+
+.user__avatar {
+    font-size: 2rem;
+}
+
+
+.list__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie__list {
+    padding: 0 1rem 3rem 1rem;
+}
+
+.list__title {
+    font-size: 1.75rem;
+    margin: 2.5rem;
+    text-align: center;
+} 
+/* ---------- Base Page & Utility ---------- */
+body {
+  margin: 0;
+  background: #0d0d0d;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+/* ---------- Title ---------- */
+.page__title {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 2rem;
+}
+
+/* ---------- Movie List Section ---------- */
+.movie__list {
+  padding: 0 2rem 4rem 2rem;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+.movie__list {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem 2rem;
+}
+
+.list__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+/* ---------- Movie Title ---------- */
+.list__title {
+  font-size: 2rem;
+  margin-block: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+/* ---------- Cards Grid ---------- */
+.list__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* ---------- Individual Card ---------- */
+.cards {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid rgb(99, 99, 99);
+  width: 100%;
+  max-width: 200px;
+  height: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #1a1a1a;
+  z-index: 0;
+}
+
+.cards:hover {
+  transform: scale(1.15);
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px, rgba(0, 0, 0, 0.12) 0px -12px 30px;
+}
+
+/* ---------- Poster Image ---------- */
+.cards__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Overlay (fade-in description) ---------- */
+.cards__overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  pointer-events: none;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85) 30%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cards:hover .cards__overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- Text Styles (on overlay) ---------- */
+.card__title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.card__runtime {
+  font-size: 0.8rem;
+  margin-bottom: 0.35rem;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.85;
+}
+
+.card__rating {
+  float: right;
+}
+
+.card__description {
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-top: 0.25rem;
+  color: #eee;
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Responsive Layout ---------- */
+@media (max-width: 768px) {
+  .cards {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .cards {
+    max-width: 100%;
+  }
+
+  .movie__list {
+    padding: 0 1rem;
+  }
+}
